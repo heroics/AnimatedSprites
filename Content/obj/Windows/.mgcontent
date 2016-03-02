@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SourceFileCollection xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Profile>Reach</Profile>
+  <Platform>Windows</Platform>
+  <Config />
+  <SourceFiles>
+    <File>C:/Users/Jordan Hunt/Documents/My Code/XNA+Monogame/AnimatedSprites/AnimatedSprites/Content/Images/threerings.png</File>
+    <File>C:/Users/Jordan Hunt/Documents/My Code/XNA+Monogame/AnimatedSprites/AnimatedSprites/Content/Images/skullball.png</File>
+    <File>C:/Users/Jordan Hunt/Documents/My Code/XNA+Monogame/AnimatedSprites/AnimatedSprites/Content/Images/plus.png</File>
+  </SourceFiles>
+</SourceFileCollection>
