@@ -13,9 +13,9 @@ namespace AnimatedSprites
         PlayerSprite player;
         List<Sprite> spriteList = new List<Sprite>();
 
-        public SpriteManager(Game game): base(game)
+        public SpriteManager(Game game) : base(game)
         {
-            
+
         }
 
         protected override void LoadContent()
@@ -28,7 +28,9 @@ namespace AnimatedSprites
                 Vector2.Zero, new Point(75, 75), 10, new Point(0, 0), new Point(6, 8), new Vector2(6, 6));
 
             //Add Bomb Sprites
-            
+            spriteList.Add(new AutomatedSprite(Game.Content.Load<Texture2D>(@"image/skullball"),
+                new Vector2(150, 150), new Point(75, 75), 10, new Point(0, 0), new Point(6, 8), Vector2.Zero));
+
 
             base.LoadContent();
         }
@@ -47,5 +49,6 @@ namespace AnimatedSprites
         {
             base.Initialize();
         }
+
     }
 }

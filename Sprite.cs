@@ -7,7 +7,7 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace AnimatedSprites
 {
-    class Sprite
+   abstract class Sprite
     {
         /*
         Class Variables to be used for each instance of Sprite, and sub-class
