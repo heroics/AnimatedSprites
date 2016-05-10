@@ -24,11 +24,11 @@ namespace AnimatedSprites
             spriteBatch = new SpriteBatch(Game.GraphicsDevice);
 
             //Intialize the player object 
-            player = new PlayerSprite(Game.Content.Load<Texture2D>(@"image/threerings"),
+            player = new PlayerSprite(Game.Content.Load<Texture2D>(@"images/threerings"),
                 Vector2.Zero, new Point(75, 75), 10, new Point(0, 0), new Point(6, 8), new Vector2(6, 6));
 
             //Add Bomb Sprites
-            spriteList.Add(new AutomatedSprite(Game.Content.Load<Texture2D>(@"image/skullball"),
+            spriteList.Add(new AutomatedSprite(Game.Content.Load<Texture2D>(@"images/skullball"),
                 new Vector2(150, 150), new Point(75, 75), 10, new Point(0, 0), new Point(6, 8), Vector2.Zero));
 
 
