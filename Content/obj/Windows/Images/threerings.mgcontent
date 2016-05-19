@@ -3,11 +3,11 @@
   <SourceFile>C:/Users/Jordan Hunt/Documents/My Code/XNA+Monogame/AnimatedSprites/AnimatedSprites/Content/Images/threerings.png</SourceFile>
   <SourceTime>2015-11-23T13:18:26.7159482-07:00</SourceTime>
   <DestFile>C:/Users/Jordan Hunt/Documents/My Code/XNA+Monogame/AnimatedSprites/AnimatedSprites/Content/bin/Windows/Images/threerings.xnb</DestFile>
-  <DestTime>2015-11-23T13:19:58.9002213-07:00</DestTime>
+  <DestTime>2016-05-18T12:20:27.9523893-07:00</DestTime>
   <Importer>TextureImporter</Importer>
-  <ImporterTime>2015-04-29T10:14:44-07:00</ImporterTime>
+  <ImporterTime>2016-03-29T23:36:08-07:00</ImporterTime>
   <Processor>TextureProcessor</Processor>
-  <ProcessorTime>2015-04-29T10:14:44-07:00</ProcessorTime>
+  <ProcessorTime>2016-03-29T23:36:08-07:00</ProcessorTime>
   <Parameters>
     <Key>ColorKeyColor</Key>
     <Value>255,0,255,255</Value>
@@ -26,6 +26,10 @@
   </Parameters>
   <Parameters>
     <Key>ResizeToPowerOfTwo</Key>
+    <Value>False</Value>
+  </Parameters>
+  <Parameters>
+    <Key>MakeSquare</Key>
     <Value>False</Value>
   </Parameters>
   <Parameters>

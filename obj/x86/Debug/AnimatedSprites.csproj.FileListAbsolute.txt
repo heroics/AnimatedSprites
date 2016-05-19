@@ -1,3 +1,10 @@
+C:\Users\Jordan Hunt\Documents\My Code\XNA+Monogame\AnimatedSprites\AnimatedSprites\bin\Windows\Debug\AnimatedSprites.exe.config
+C:\Users\Jordan Hunt\Documents\My Code\XNA+Monogame\AnimatedSprites\AnimatedSprites\bin\Windows\Debug\Content\Audio\bounceSound.xnb
+C:\Users\Jordan Hunt\Documents\My Code\XNA+Monogame\AnimatedSprites\AnimatedSprites\bin\Windows\Debug\Content\Audio\GameStart.xnb
+C:\Users\Jordan Hunt\Documents\My Code\XNA+Monogame\AnimatedSprites\AnimatedSprites\bin\Windows\Debug\Content\Audio\intro.wma
+C:\Users\Jordan Hunt\Documents\My Code\XNA+Monogame\AnimatedSprites\AnimatedSprites\bin\Windows\Debug\Content\Audio\intro.xnb
+C:\Users\Jordan Hunt\Documents\My Code\XNA+Monogame\AnimatedSprites\AnimatedSprites\bin\Windows\Debug\Content\Images\plus.xnb
+C:\Users\Jordan Hunt\Documents\My Code\XNA+Monogame\AnimatedSprites\AnimatedSprites\bin\Windows\Debug\Content\Images\skullball.xnb
 C:\Users\Jordan Hunt\Documents\My Code\XNA+Monogame\AnimatedSprites\AnimatedSprites\bin\Windows\Debug\Content\Images\threerings.xnb
 C:\Users\Jordan Hunt\Documents\My Code\XNA+Monogame\AnimatedSprites\AnimatedSprites\bin\Windows\Debug\AnimatedSprites.exe
 C:\Users\Jordan Hunt\Documents\My Code\XNA+Monogame\AnimatedSprites\AnimatedSprites\bin\Windows\Debug\AnimatedSprites.pdb
@@ -5,8 +12,8 @@ C:\Users\Jordan Hunt\Documents\My Code\XNA+Monogame\AnimatedSprites\AnimatedSpri
 C:\Users\Jordan Hunt\Documents\My Code\XNA+Monogame\AnimatedSprites\AnimatedSprites\bin\Windows\Debug\SharpDX.MediaFoundation.dll
 C:\Users\Jordan Hunt\Documents\My Code\XNA+Monogame\AnimatedSprites\AnimatedSprites\bin\Windows\Debug\SharpDX.dll
 C:\Users\Jordan Hunt\Documents\My Code\XNA+Monogame\AnimatedSprites\AnimatedSprites\bin\Windows\Debug\SharpDX.XAudio2.dll
-C:\Users\Jordan Hunt\Documents\My Code\XNA+Monogame\AnimatedSprites\AnimatedSprites\bin\Windows\Debug\SharpDX.Direct3D11.dll
 C:\Users\Jordan Hunt\Documents\My Code\XNA+Monogame\AnimatedSprites\AnimatedSprites\bin\Windows\Debug\SharpDX.DXGI.dll
+C:\Users\Jordan Hunt\Documents\My Code\XNA+Monogame\AnimatedSprites\AnimatedSprites\bin\Windows\Debug\SharpDX.Direct3D11.dll
 C:\Users\Jordan Hunt\Documents\My Code\XNA+Monogame\AnimatedSprites\AnimatedSprites\bin\Windows\Debug\SharpDX.Direct2D1.dll
 C:\Users\Jordan Hunt\Documents\My Code\XNA+Monogame\AnimatedSprites\AnimatedSprites\bin\Windows\Debug\SharpDX.XInput.dll
 C:\Users\Jordan Hunt\Documents\My Code\XNA+Monogame\AnimatedSprites\AnimatedSprites\bin\Windows\Debug\SharpDX.RawInput.dll
@@ -15,14 +22,12 @@ C:\Users\Jordan Hunt\Documents\My Code\XNA+Monogame\AnimatedSprites\AnimatedSpri
 C:\Users\Jordan Hunt\Documents\My Code\XNA+Monogame\AnimatedSprites\AnimatedSprites\bin\Windows\Debug\SharpDX.MediaFoundation.xml
 C:\Users\Jordan Hunt\Documents\My Code\XNA+Monogame\AnimatedSprites\AnimatedSprites\bin\Windows\Debug\SharpDX.xml
 C:\Users\Jordan Hunt\Documents\My Code\XNA+Monogame\AnimatedSprites\AnimatedSprites\bin\Windows\Debug\SharpDX.XAudio2.xml
-C:\Users\Jordan Hunt\Documents\My Code\XNA+Monogame\AnimatedSprites\AnimatedSprites\bin\Windows\Debug\SharpDX.Direct3D11.xml
 C:\Users\Jordan Hunt\Documents\My Code\XNA+Monogame\AnimatedSprites\AnimatedSprites\bin\Windows\Debug\SharpDX.DXGI.xml
+C:\Users\Jordan Hunt\Documents\My Code\XNA+Monogame\AnimatedSprites\AnimatedSprites\bin\Windows\Debug\SharpDX.Direct3D11.xml
 C:\Users\Jordan Hunt\Documents\My Code\XNA+Monogame\AnimatedSprites\AnimatedSprites\bin\Windows\Debug\SharpDX.Direct2D1.xml
 C:\Users\Jordan Hunt\Documents\My Code\XNA+Monogame\AnimatedSprites\AnimatedSprites\bin\Windows\Debug\SharpDX.XInput.xml
 C:\Users\Jordan Hunt\Documents\My Code\XNA+Monogame\AnimatedSprites\AnimatedSprites\bin\Windows\Debug\SharpDX.RawInput.xml
 C:\Users\Jordan Hunt\Documents\My Code\XNA+Monogame\AnimatedSprites\AnimatedSprites\bin\Windows\Debug\SharpDX.Direct3D9.xml
+C:\Users\Jordan Hunt\Documents\My Code\XNA+Monogame\AnimatedSprites\AnimatedSprites\obj\x86\Debug\AnimatedSprites.csprojResolveAssemblyReference.cache
 C:\Users\Jordan Hunt\Documents\My Code\XNA+Monogame\AnimatedSprites\AnimatedSprites\obj\x86\Debug\AnimatedSprites.exe
 C:\Users\Jordan Hunt\Documents\My Code\XNA+Monogame\AnimatedSprites\AnimatedSprites\obj\x86\Debug\AnimatedSprites.pdb
-C:\Users\Jordan Hunt\Documents\My Code\XNA+Monogame\AnimatedSprites\AnimatedSprites\obj\x86\Debug\AnimatedSprites.csprojResolveAssemblyReference.cache
-C:\Users\Jordan Hunt\Documents\My Code\XNA+Monogame\AnimatedSprites\AnimatedSprites\bin\Windows\Debug\Content\Images\skullball.xnb
-C:\Users\Jordan Hunt\Documents\My Code\XNA+Monogame\AnimatedSprites\AnimatedSprites\bin\Windows\Debug\Content\Images\plus.xnb

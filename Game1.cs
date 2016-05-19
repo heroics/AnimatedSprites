@@ -1,4 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
@@ -61,6 +62,10 @@ namespace AnimatedSprites
         //SpriteManager
         SpriteManager spriteManager;
 
+        //Audio File
+        SoundEffect wallBounce;
+        SoundEffectInstance wallBounceInstance;
+
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
@@ -92,9 +97,12 @@ namespace AnimatedSprites
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
             // TODO: use this.Content to load your game content here
-            ringsTexture = Content.Load<Texture2D>(@"images\threerings");
-            skullTexture = Content.Load<Texture2D>(@"images\skullball");
-            plusTexture = Content.Load<Texture2D>(@"images\plus");
+            ringsTexture = Content.Load<Texture2D>(@"Images\threerings");
+            skullTexture = Content.Load<Texture2D>(@"Images\skullball");
+            plusTexture = Content.Load<Texture2D>(@"Images\plus");
+
+            wallBounce = Content.Load<SoundEffect>(@"Audio\bounceSound");
+            wallBounceInstance = wallBounce.CreateInstance();
         }
 
         /// <summary>
@@ -261,6 +269,7 @@ namespace AnimatedSprites
                 skullPosition.X < 0)
             {
                 skullSpeed.X *= -1;
+                wallBounceInstance.Play();
             }
 
             if (skullPosition.Y >
@@ -268,6 +277,7 @@ namespace AnimatedSprites
                 skullPosition.Y < 0)
             {
                 skullSpeed.Y *= -1;
+                wallBounceInstance.Play();
             }
 
 
