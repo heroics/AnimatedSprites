@@ -2,6 +2,7 @@
 using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using Microsoft.Xna.Framework.Media;
 
 namespace AnimatedSprites
 {
@@ -66,6 +67,11 @@ namespace AnimatedSprites
         SoundEffect wallBounce;
         SoundEffectInstance wallBounceInstance;
 
+        //Game music
+        private Song gameMusic;
+
+        //Random Number Generator 
+
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
@@ -103,6 +109,9 @@ namespace AnimatedSprites
 
             wallBounce = Content.Load<SoundEffect>(@"Audio\bounceSound");
             wallBounceInstance = wallBounce.CreateInstance();
+
+            gameMusic = Content.Load<Song>(@"Audio\intro");
+            MediaPlayer.Play(gameMusic);
         }
 
         /// <summary>
@@ -111,7 +120,7 @@ namespace AnimatedSprites
         /// </summary>
         protected override void UnloadContent()
         {
-            // TODO: Unload any non ContentManager content here
+            wallBounceInstance.Dispose();
         }
 
         /// <summary>
