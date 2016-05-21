@@ -3,6 +3,7 @@ using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
+using System;
 
 namespace AnimatedSprites
 {
@@ -71,11 +72,17 @@ namespace AnimatedSprites
         private Song gameMusic;
 
         //Random Number Generator 
+        public Random random
+        {
+            get;
+            private set;
+        }
 
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
+            this.random = new Random();
         }
 
         /// <summary>
@@ -112,6 +119,10 @@ namespace AnimatedSprites
 
             gameMusic = Content.Load<Song>(@"Audio\intro");
             MediaPlayer.Play(gameMusic);
+
+            //Window Configurations
+            graphics.PreferredBackBufferHeight = 768;
+            graphics.PreferredBackBufferWidth = 1024;
         }
 
         /// <summary>

@@ -13,9 +13,23 @@ namespace AnimatedSprites
         PlayerSprite player;
         List<Sprite> spriteList = new List<Sprite>();
 
+        //Randomly Spawned Sprites
+        int skullSpawnMinMilliseconds = 1000;
+        int skullSpawnMaxMilliseconds = 2205;
+        int skullSpawnMinSpeed = 2;
+        int skullSpawnMaxSpeed = 6;
+        int nextSpawnTime = 0;
+
+
         public SpriteManager(Game game) : base(game)
         {
 
+        }
+
+        private void ResetSpawnTime()
+        {
+            nextSpawnTime = ((Game1)Game).random.Next(skullSpawnMinMilliseconds,
+                skullSpawnMaxMilliseconds);
         }
 
         protected override void LoadContent()
@@ -42,11 +56,40 @@ namespace AnimatedSprites
 
         public override void Update(GameTime gameTime)
         {
+            nextSpawnTime -= gameTime.ElapsedGameTime.Milliseconds;
+
+            if (nextSpawnTime < 0)
+            {
+                SpawnEnemy();
+
+                //Reset the spawn timer creating an enemy
+                ResetSpawnTime();
+            }
             base.Update(gameTime);
+        }
+
+        private void SpawnEnemy()
+        {
+            Vector2 speed = Vector2.Zero;
+            Vector2 position = Vector2.Zero;
+
+            //Default frame size
+            Point frameSize = new Point(75, 75);
+
+            /* Randomly choose which side of the sceen to place enemy
+             * then randomly create position along that side of the screen
+             * and randomly choose a speed/direction for the enemy
+             */
+
+            //Randomly pick a number between 0 & 3
+            switch (((Game1)Game).random.Next(4)))
+            {
+            }
         }
 
         public override void Initialize()
         {
+            ResetSpawnTime();
             base.Initialize();
         }
 
