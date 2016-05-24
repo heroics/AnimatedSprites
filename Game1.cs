@@ -78,6 +78,14 @@ namespace AnimatedSprites
             private set;
         }
 
+        //Randomly Spawned Sprites
+        int skullSpawnMinMilliseconds = 1000;
+        int skullSpawnMaxMilliseconds = 2205;
+        int skullSpawnMinSpeed = 2;
+        int skullSpawnMaxSpeed = 6;
+
+
+
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
@@ -119,10 +127,6 @@ namespace AnimatedSprites
 
             gameMusic = Content.Load<Song>(@"Audio\intro");
             MediaPlayer.Play(gameMusic);
-
-            //Window Configurations
-            graphics.PreferredBackBufferHeight = 768;
-            graphics.PreferredBackBufferWidth = 1024;
         }
 
         /// <summary>

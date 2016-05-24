@@ -15,7 +15,7 @@ namespace AnimatedSprites
 
         //Randomly Spawned Sprites
         int skullSpawnMinMilliseconds = 1000;
-        int skullSpawnMaxMilliseconds = 2205;
+        int skullSpawnMaxMilliseconds = 2005;
         int skullSpawnMinSpeed = 2;
         int skullSpawnMaxSpeed = 6;
         int nextSpawnTime = 0;
@@ -41,11 +41,7 @@ namespace AnimatedSprites
             player = new PlayerSprite(Game.Content.Load<Texture2D>(@"images/threerings"),
                 Vector2.Zero, new Point(75, 75), 10, new Point(0, 0), new Point(6, 8), new Vector2(6, 6));
 
-            //Add Bomb Sprites
-            spriteList.Add(new AutomatedSprite(Game.Content.Load<Texture2D>(@"images/skullball"),
-                new Vector2(150, 150), new Point(75, 75), 10, new Point(0, 0), new Point(6, 8), Vector2.Zero));
-
-
+          
             base.LoadContent();
         }
 
@@ -65,6 +61,7 @@ namespace AnimatedSprites
                 //Reset the spawn timer creating an enemy
                 ResetSpawnTime();
             }
+
             base.Update(gameTime);
         }
 
@@ -82,9 +79,47 @@ namespace AnimatedSprites
              */
 
             //Randomly pick a number between 0 & 3
-            switch (((Game1)Game).random.Next(4)))
+            switch (((Game1)Game).random.Next(4))
             {
+                //Move LEFT to RIGHT
+                case 0:
+                    position = new Vector2(-frameSize.X, ((Game1)Game).random.Next(
+                        0, Game.GraphicsDevice.PresentationParameters.BackBufferHeight - frameSize.Y));
+                    speed = new Vector2(((Game1)Game).random.Next(
+                        skullSpawnMinSpeed, skullSpawnMaxSpeed), 0);
+                    break;
+
+                //Move RIGHT to LEFT
+                case 1:
+                    position = new Vector2(Game.GraphicsDevice.PresentationParameters.BackBufferWidth, (
+                        (Game1)Game).random.Next(0, Game.GraphicsDevice.PresentationParameters.BackBufferHeight
+                        - frameSize.Y));
+                    speed = new Vector2(-((Game1)Game).random.Next(skullSpawnMinSpeed, skullSpawnMaxSpeed), 0);
+                    break;
+
+                //Move BOTTOM to TOP
+                case 2:
+                    position = new Vector2(((Game1)Game).random.Next(0,
+                        Game.GraphicsDevice.PresentationParameters.BackBufferWidth - frameSize.X),
+                        Game.GraphicsDevice.PresentationParameters.BackBufferHeight);
+
+                    speed = new Vector2(0, -((Game1)Game).random.Next(
+                        skullSpawnMinSpeed, skullSpawnMaxSpeed));
+                    break;
+
+                case 3:
+                    position = new Vector2(((Game1)Game).random.Next(
+                        0, Game.GraphicsDevice.PresentationParameters.BackBufferWidth - frameSize.X), -frameSize.Y);
+
+                    speed = new Vector2(((Game1)Game).random.Next(0, Game.GraphicsDevice.PresentationParameters
+                        .BackBufferWidth - frameSize.X), -frameSize.Y);
+                    break;
+
             }
+
+            //Create the sprite
+            spriteList.Add(new AutomatedSprite(Game.Content.Load<Texture2D>(@"images\skullball"),
+                position, new Point(75, 75), 10, new Point(0, 0), new Point(6, 8), speed));
         }
 
         public override void Initialize()
