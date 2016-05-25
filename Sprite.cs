@@ -50,7 +50,7 @@ int collisionOffset, Point currentFrame, Point sheetSize, Vector2 speed,int mill
         public virtual void Update(GameTime gameTime, Rectangle clientsbounds)
         {
             timeSinceLastFrame += gameTime.ElapsedGameTime.Milliseconds;
-            if(timeSinceLastFrame >= millisecondsPerFrame)
+            if(timeSinceLastFrame > millisecondsPerFrame)
             {
                 timeSinceLastFrame = 0;
                 currentFrame.X++;
@@ -82,7 +82,7 @@ int collisionOffset, Point currentFrame, Point sheetSize, Vector2 speed,int mill
             get;
         }
 
-        public Rectangle collisionRect
+        public Rectangle getCollisionRect
         {
             get
             {

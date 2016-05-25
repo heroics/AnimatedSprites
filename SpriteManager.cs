@@ -41,26 +41,57 @@ namespace AnimatedSprites
             player = new PlayerSprite(Game.Content.Load<Texture2D>(@"images/threerings"),
                 Vector2.Zero, new Point(75, 75), 10, new Point(0, 0), new Point(6, 8), new Vector2(6, 6));
 
+            //Create the Plus and Skull
+            spriteList.Add(new AutomatedSprite(Game.Content.Load<Texture2D>(@"images/skullball"),
+                new Vector2(150, 150), new Point(75, 75), 10, new Point(0, 0),
+                new Point(6, 8), Vector2.Zero));
           
             base.LoadContent();
         }
 
         public override void Draw(GameTime gameTime)
         {
+            spriteBatch.Begin(SpriteSortMode.FrontToBack, BlendState.AlphaBlend);
+
+            //Draw the player
+            player.Draw(gameTime, spriteBatch);
+
+            //Draw all the other sprites
+            foreach (Sprite sprite in spriteList)
+            {
+                sprite.Draw(gameTime, spriteBatch);
+            }
+
+            spriteBatch.End();
+
             base.Draw(gameTime);
         }
 
         public override void Update(GameTime gameTime)
         {
-            nextSpawnTime -= gameTime.ElapsedGameTime.Milliseconds;
+            //Update the player
+            player.Update(gameTime, Game.Window.ClientBounds);
 
-            if (nextSpawnTime < 0)
+            //Update the other sprites
+            foreach (Sprite sprite in spriteList)
             {
-                SpawnEnemy();
+                sprite.Update(gameTime, Game.Window.ClientBounds);
 
-                //Reset the spawn timer creating an enemy
-                ResetSpawnTime();
+                if (sprite.getCollisionRect.Intersects(player.getCollisionRect))
+                {
+                    Game.Exit();
+                }
+
             }
+            //nextSpawnTime -= gameTime.ElapsedGameTime.Milliseconds;
+
+            //if (nextSpawnTime < 0)
+            //{
+            //    SpawnEnemy();
+
+            //    //Reset the spawn timer creating an enemy
+            //    ResetSpawnTime();
+            //}
 
             base.Update(gameTime);
         }
@@ -127,6 +158,7 @@ namespace AnimatedSprites
             ResetSpawnTime();
             base.Initialize();
         }
+
 
     }
 }

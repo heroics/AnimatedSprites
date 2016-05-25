@@ -13,13 +13,15 @@ namespace AnimatedSprites
 
         //Constructors
         public PlayerSprite(Texture2D textureImage, Vector2 position, Point frameSize, int collisonOffset
-        , Point sheetSize, Point currentFrame, Vector2 speed) : base(textureImage, position, frameSize, collisonOffset, currentFrame, sheetSize, speed)
+        , Point currentFrame, Point sheetSize, Vector2 speed) 
+            : base(textureImage, position, frameSize, collisonOffset, currentFrame, sheetSize, speed)
         {
 
         }
 
         public PlayerSprite(Texture2D textureImage, Vector2 position, Point frameSize, int collisonOffset
-, Point sheetSize, Point currentFrame, Vector2 speed, int millisecondsPerFrame) : base(textureImage, position, frameSize, collisonOffset, currentFrame, sheetSize, speed, millisecondsPerFrame)
+, Point currentFrame, Point sheetSize, Vector2 speed, int millisecondsPerFrame) 
+            : base(textureImage, position, frameSize, collisonOffset, currentFrame, sheetSize, speed, millisecondsPerFrame)
         {
 
         }
@@ -65,6 +67,7 @@ namespace AnimatedSprites
 
             base.Update(gameTime, clientsbounds);
         }
+
         public override Vector2 direction
         {
             get
@@ -107,9 +110,12 @@ namespace AnimatedSprites
                     inputDirection.Y -= gamePadState.ThumbSticks.Left.Y;
                 }
 
+
+
                 return inputDirection * speed;
 
             }
         }
+
     }
 }
