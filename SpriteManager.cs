@@ -20,6 +20,10 @@ namespace AnimatedSprites
         int skullSpawnMaxSpeed = 6;
         int nextSpawnTime = 0;
 
+        Random myRandom = new Random();
+        int randomSpeedMin = -5;
+        int randomSpeedMax = 5;
+
 
         public SpriteManager(Game game) : base(game)
         {
@@ -45,7 +49,12 @@ namespace AnimatedSprites
             spriteList.Add(new AutomatedSprite(Game.Content.Load<Texture2D>(@"images/skullball"),
                 new Vector2(150, 150), new Point(75, 75), 10, new Point(0, 0),
                 new Point(6, 8), Vector2.Zero));
-          
+
+            spriteList.Add(new BouncingSprite(Game.Content.Load<Texture2D>(@"Images/plus"),
+                new Vector2(300, 150), new Point(75, 75), 10, new Point(0, 0),
+                new Point(6, 4), 
+                new Vector2(myRandom.Next(randomSpeedMin, randomSpeedMax), myRandom.Next(randomSpeedMin, randomSpeedMax))));
+
             base.LoadContent();
         }
 

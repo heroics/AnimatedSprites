@@ -43,6 +43,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="AutomatedSprite.cs" />
+    <Compile Include="BouncingSprite.cs" />
     <Compile Include="Game1.cs" />
     <Compile Include="PlayerSprite.cs" />
     <Compile Include="Program.cs" />
