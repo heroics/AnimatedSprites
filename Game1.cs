@@ -48,6 +48,10 @@ namespace AnimatedSprites
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
             this.random = new Random();
+
+            //Adjust window size
+            graphics.PreferredBackBufferHeight = 768;
+            graphics.PreferredBackBufferHeight = 1024;
         }
 
         /// <summary>

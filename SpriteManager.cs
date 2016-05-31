@@ -45,15 +45,6 @@ namespace AnimatedSprites
             player = new PlayerSprite(Game.Content.Load<Texture2D>(@"images/threerings"),
                 Vector2.Zero, new Point(75, 75), 10, new Point(0, 0), new Point(6, 8), new Vector2(6, 6));
 
-            //Create the Plus and Skull
-            spriteList.Add(new AutomatedSprite(Game.Content.Load<Texture2D>(@"images/skullball"),
-                new Vector2(150, 150), new Point(75, 75), 10, new Point(0, 0),
-                new Point(6, 8), Vector2.Zero));
-
-            spriteList.Add(new BouncingSprite(Game.Content.Load<Texture2D>(@"Images/plus"),
-                new Vector2(300, 150), new Point(75, 75), 10, new Point(0, 0),
-                new Point(6, 4), 
-                new Vector2(myRandom.Next(randomSpeedMin, randomSpeedMax), myRandom.Next(randomSpeedMin, randomSpeedMax))));
 
             base.LoadContent();
         }
@@ -89,18 +80,23 @@ namespace AnimatedSprites
                 if (sprite.getCollisionRect.Intersects(player.getCollisionRect))
                 {
                     Game.Exit();
+                    break; 
                 }
 
             }
-            //nextSpawnTime -= gameTime.ElapsedGameTime.Milliseconds;
 
-            //if (nextSpawnTime < 0)
-            //{
-            //    SpawnEnemy();
+            //Spawn the enemys
 
-            //    //Reset the spawn timer creating an enemy
-            //    ResetSpawnTime();
-            //}
+            //When timer is less than zero spawn an enemy sprite
+            nextSpawnTime -= gameTime.ElapsedGameTime.Milliseconds;
+
+            if (nextSpawnTime < 0)
+            {
+                SpawnEnemy();
+
+                //Reset the spawn timer creating an enemy
+                ResetSpawnTime();
+            }
 
             base.Update(gameTime);
         }
@@ -147,6 +143,7 @@ namespace AnimatedSprites
                         skullSpawnMinSpeed, skullSpawnMaxSpeed));
                     break;
 
+                //Move TOP to BOTTOM
                 case 3:
                     position = new Vector2(((Game1)Game).random.Next(
                         0, Game.GraphicsDevice.PresentationParameters.BackBufferWidth - frameSize.X), -frameSize.Y);
