@@ -7,7 +7,7 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace AnimatedSprites
 {
-   abstract class Sprite
+    abstract class Sprite
     {
         /*
         Class Variables to be used for each instance of Sprite, and sub-class
@@ -34,7 +34,7 @@ namespace AnimatedSprites
         }
 
         public Sprite(Texture2D textureImage, Vector2 position, Point frameSize,
-int collisionOffset, Point currentFrame, Point sheetSize, Vector2 speed,int millisecondsPerFrame)
+int collisionOffset, Point currentFrame, Point sheetSize, Vector2 speed, int millisecondsPerFrame)
         {
             this.textureImage = textureImage;
             this.position = position;
@@ -50,15 +50,15 @@ int collisionOffset, Point currentFrame, Point sheetSize, Vector2 speed,int mill
         public virtual void Update(GameTime gameTime, Rectangle clientsbounds)
         {
             timeSinceLastFrame += gameTime.ElapsedGameTime.Milliseconds;
-            if(timeSinceLastFrame > millisecondsPerFrame)
+            if (timeSinceLastFrame > millisecondsPerFrame)
             {
                 timeSinceLastFrame = 0;
                 currentFrame.X++;
-                if(currentFrame.X >= sheetSize.X)
+                if (currentFrame.X >= sheetSize.X)
                 {
                     currentFrame.X = 0;
                     currentFrame.Y++;
-                    if( currentFrame.Y >= sheetSize.Y)
+                    if (currentFrame.Y >= sheetSize.Y)
                     {
                         currentFrame.Y = 0;
                     }
@@ -82,7 +82,7 @@ int collisionOffset, Point currentFrame, Point sheetSize, Vector2 speed,int mill
             get;
         }
 
-        public Rectangle getCollisionRect
+        public Rectangle GetCollisionRect
         {
             get
             {
@@ -93,5 +93,29 @@ int collisionOffset, Point currentFrame, Point sheetSize, Vector2 speed,int mill
             }
         }
 
+        //Check and see if a sprite is out the bounds of screen
+        public bool IsOutOfBounds(Rectangle clientRect)
+        {
+            if (position.X < -frameSize.X ||
+                position.X > clientRect.Width ||
+                position.Y < -frameSize.Y ||
+                position.Y > clientRect.Height)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        //Return the position of a sprite
+        public Vector2 GetPosition
+        {
+            get
+            {
+                return position;
+            }
+        }
     }
 }

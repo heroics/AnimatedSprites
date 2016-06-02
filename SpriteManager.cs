@@ -73,22 +73,31 @@ namespace AnimatedSprites
             player.Update(gameTime, Game.Window.ClientBounds);
 
             //Update the other sprites
-            foreach (Sprite sprite in spriteList)
+            for(int i = 0; i < spriteList.Count; i++)
             {
+                Sprite sprite = spriteList[i];
+
                 sprite.Update(gameTime, Game.Window.ClientBounds);
 
-                if (sprite.getCollisionRect.Intersects(player.getCollisionRect))
+                if (sprite.GetCollisionRect.Intersects(player.GetCollisionRect))
                 {
                     Game.Exit();
                     break; 
                 }
+
+                //Remove if object if it is out of bounds
+                if (sprite.IsOutOfBounds(Game.Window.ClientBounds))
+                {
+                    spriteList.Remove(sprite);
+                }
+
 
             }
 
             //Spawn the enemys
 
             //When timer is less than zero spawn an enemy sprite
-            nextSpawnTime -= gameTime.ElapsedGameTime.Milliseconds;
+            nextSpawnTime -= gameTime.ElapsedGameTime.Milliseconds - 1;
 
             if (nextSpawnTime < 0)
             {
@@ -157,6 +166,23 @@ namespace AnimatedSprites
             //Create the sprite
             spriteList.Add(new AutomatedSprite(Game.Content.Load<Texture2D>(@"images\skullball"),
                 position, new Point(75, 75), 10, new Point(0, 0), new Point(6, 8), speed));
+
+            //Randomly Spawn Chasing Sprites
+            int chasingSpriteFlag = myRandom.Next(10);
+
+            if (chasingSpriteFlag % 2 == 0)
+            {
+                spriteList.Add(new ChasingSprite(Game.Content.Load<Texture2D>(@"images\plus"),
+                    position, new Point(75, 75), 10, new Point(0, 0), new Point(6, 4), new Vector2(myRandom.Next(randomSpeedMin, randomSpeedMax), myRandom.Next(randomSpeedMin, randomSpeedMax)), this));
+
+            }
+
+        }
+
+        //Find the player's position on the board
+        public Vector2 GetPlayerPosition()
+        {
+            return player.GetPosition;
         }
 
         public override void Initialize()

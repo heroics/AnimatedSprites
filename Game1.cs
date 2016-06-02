@@ -50,8 +50,8 @@ namespace AnimatedSprites
             this.random = new Random();
 
             //Adjust window size
-            graphics.PreferredBackBufferHeight = 768;
             graphics.PreferredBackBufferHeight = 1024;
+            graphics.PreferredBackBufferHeight = 768;
         }
 
         /// <summary>
