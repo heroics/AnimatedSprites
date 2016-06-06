@@ -45,6 +45,7 @@
     <Compile Include="AutomatedSprite.cs" />
     <Compile Include="BouncingSprite.cs" />
     <Compile Include="ChasingSprite.cs" />
+    <Compile Include="EvadingSprite.cs" />
     <Compile Include="Game1.cs" />
     <Compile Include="PlayerSprite.cs" />
     <Compile Include="Program.cs" />

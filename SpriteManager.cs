@@ -21,7 +21,7 @@ namespace AnimatedSprites
         int nextSpawnTime = 0;
 
         Random myRandom = new Random();
-        int randomSpeedMin = -5;
+        int randomSpeedMin = 1;
         int randomSpeedMax = 5;
 
 
@@ -173,9 +173,15 @@ namespace AnimatedSprites
             if (chasingSpriteFlag % 2 == 0)
             {
                 spriteList.Add(new ChasingSprite(Game.Content.Load<Texture2D>(@"images\plus"),
-                    position, new Point(75, 75), 10, new Point(0, 0), new Point(6, 4), new Vector2(myRandom.Next(randomSpeedMin, randomSpeedMax), myRandom.Next(randomSpeedMin, randomSpeedMax)), this));
+                    position, new Point(75, 75), 10, new Point(0, 0), new Point(6, 4), speed, this));
 
             }
+            else
+            {
+                spriteList.Add(new EvadingSprite(Game.Content.Load<Texture2D>(@"images\star"),
+                    position, new Point(200, 200), 10, new Point(0, 0), new Point(1, 1), speed, this));
+            }
+
 
         }
 

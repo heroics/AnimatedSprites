@@ -44,36 +44,39 @@ namespace AnimatedSprites
 
         public override void Update(GameTime gameTime, Rectangle clientsbounds)
         {
+
+            //First, move the sprite along its direction vector
+            position += speed;
+
             //Find the player using spriteManager
             Vector2 playerPosition = spriteManager.GetPlayerPosition();
 
-            //Because the sprite may be moving in the X or Y direction
-            //but not both, get the largest of the two and use it to as the
-            //speed of the object
-
-            float speedVal = Math.Max(Math.Abs(speed.X), Math.Abs(speed.Y));
-
-            if (playerPosition.X < position.X)
+            //If the player is moving vectically, chase horizontally
+            if (speed.X == 0)
             {
-                position.X -= speedVal;
+                if(playerPosition.X < position.X)
+                {
+                    position.X -= Math.Abs(speed.Y);
+                }
+                else if(playerPosition.X > position.X)
+                {
+                    position.X += Math.Abs(speed.Y);
+                }
             }
 
-            else if (playerPosition.X > position.X)
+            //If the player is moving vertically, chase vertically
+            if (speed.Y == 0)
             {
-                position.X += speedVal;
+                if (playerPosition.Y < position.Y)
+                {
+                    position.Y -= Math.Abs(speed.X);
+                }
+                else if (playerPosition.Y > position.Y)
+                {
+                    position.Y += Math.Abs(speed.X);
+                }
+
             }
-
-            if (playerPosition.Y < position.Y)
-            {
-                position.Y -= speedVal;
-            }
-
-            else if (playerPosition.Y > position.Y)
-            {
-                position.Y += speedVal;
-            }
-
-
             base.Update(gameTime, clientsbounds);
         }
     }
