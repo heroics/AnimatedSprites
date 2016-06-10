@@ -67,7 +67,7 @@
 /processorParam:Quality=Best
 /build:Audio\intro.mp3
 
-#begin Images\star.png
+#begin Images/theStar.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -77,5 +77,5 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images\star.png
+/build:Images/theStar.png
 

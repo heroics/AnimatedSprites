@@ -4,7 +4,6 @@ C:\Users\Jordan Hunt\Documents\My Code\XNA+Monogame\AnimatedSprites\AnimatedSpri
 C:\Users\Jordan Hunt\Documents\My Code\XNA+Monogame\AnimatedSprites\AnimatedSprites\bin\Windows\Debug\Content\Audio\intro.xnb
 C:\Users\Jordan Hunt\Documents\My Code\XNA+Monogame\AnimatedSprites\AnimatedSprites\bin\Windows\Debug\Content\Images\plus.xnb
 C:\Users\Jordan Hunt\Documents\My Code\XNA+Monogame\AnimatedSprites\AnimatedSprites\bin\Windows\Debug\Content\Images\skullball.xnb
-C:\Users\Jordan Hunt\Documents\My Code\XNA+Monogame\AnimatedSprites\AnimatedSprites\bin\Windows\Debug\Content\Images\star.xnb
 C:\Users\Jordan Hunt\Documents\My Code\XNA+Monogame\AnimatedSprites\AnimatedSprites\bin\Windows\Debug\Content\Images\threerings.xnb
 C:\Users\Jordan Hunt\Documents\My Code\XNA+Monogame\AnimatedSprites\AnimatedSprites\bin\Windows\Debug\AnimatedSprites.exe.config
 C:\Users\Jordan Hunt\Documents\My Code\XNA+Monogame\AnimatedSprites\AnimatedSprites\bin\Windows\Debug\AnimatedSprites.exe
@@ -31,3 +30,5 @@ C:\Users\Jordan Hunt\Documents\My Code\XNA+Monogame\AnimatedSprites\AnimatedSpri
 C:\Users\Jordan Hunt\Documents\My Code\XNA+Monogame\AnimatedSprites\AnimatedSprites\bin\Windows\Debug\SharpDX.Direct3D9.xml
 C:\Users\Jordan Hunt\Documents\My Code\XNA+Monogame\AnimatedSprites\AnimatedSprites\obj\x86\Debug\AnimatedSprites.exe
 C:\Users\Jordan Hunt\Documents\My Code\XNA+Monogame\AnimatedSprites\AnimatedSprites\obj\x86\Debug\AnimatedSprites.pdb
+C:\Users\Jordan Hunt\Documents\My Code\XNA+Monogame\AnimatedSprites\AnimatedSprites\obj\x86\Debug\AnimatedSprites.csprojResolveAssemblyReference.cache
+C:\Users\Jordan Hunt\Documents\My Code\XNA+Monogame\AnimatedSprites\AnimatedSprites\bin\Windows\Debug\Content\Images\theStar.xnb

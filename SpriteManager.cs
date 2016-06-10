@@ -178,8 +178,8 @@ namespace AnimatedSprites
             }
             else
             {
-                spriteList.Add(new EvadingSprite(Game.Content.Load<Texture2D>(@"images\star"),
-                    position, new Point(200, 200), 10, new Point(0, 0), new Point(1, 1), speed, this));
+                spriteList.Add(new EvadingSprite(Game.Content.Load<Texture2D>(@"images\theStar"),
+                    position, new Point(75, 75), 10, new Point(0, 0), new Point(1, 1), speed, this, .75f, 155));
             }
 
 
